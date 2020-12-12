@@ -1,0 +1,241 @@
+:root {
+  --glitched-duration: 0.9s;
+}
+
+
+/* Buttons and links */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f002;
+  flex-direction: column;
+}
+
+button.cyberpunk2077,
+a.cyberpunk2077 {
+  --background-color: #ff003c;
+  display: block;
+  border: none;
+  border-radius: 0%;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Advent Pro", arial;
+  padding: 35px 75px;
+  margin: 10px;
+  position: relative;
+  color: #fff;
+  border-right: 3px solid #8ae66e;
+  clip-path: polygon(
+    -15px 0%,
+    calc(100% + 15px) 0%,
+    calc(100% + 15px) 100%,
+    20px 100%,
+    -15px calc(100% - 35px)
+  );
+  cursor: pointer;
+  background-color: var(--background-color);
+  outline: none;
+}
+
+button.cyberpunk2077:hover,
+a.cyberpunk2077:hover,
+button.cyberpunk2077:focus,
+a.cyberpunk2077:focus {
+  animation-name: hover;
+  animation-duration: var(--glitched-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+button.cyberpunk2077.green,
+a.cyberpunk2077.green {
+  --background-color: #446d44;
+}
+
+button.cyberpunk2077.purple,
+a.cyberpunk2077.purple {
+  --background-color: purple;
+}
+
+button.cyberpunk2077.blue,
+a.cyberpunk2077.blue {
+  --background-color: #136377;
+}
+
+button.cyberpunk2077:after,
+a.cyberpunk2077:after {
+  content: "R-25";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 25px;
+  padding: 2px 2px 0px 2px;
+  font-size: 9px;
+  line-height: 9px;
+  color: #000;
+  background-color: #f9f002;
+  border-left: 2px solid #8ae66e;
+}
+
+button.cyberpunk2077:hover:after,
+a.cyberpunk2077:hover:after,
+button.cyberpunk2077:focus:after,
+a.cyberpunk2077:focus:after {
+  animation-name: hoverafter;
+  animation-duration: var(--glitched-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+button.cyberpunk2077:before,
+a.cyberpunk2077:before {
+  --outside: 4px;
+  content: "";
+  position: absolute;
+  display: none;
+  background-color: var(--background-color);
+  width: calc(100% + (var(--outside) * 2));
+  height: 12px;
+  top: 0px;
+  left: calc(0px - 1px - var(--outside));
+  border-left: 2px solid #8ae66e;
+  border-right: 2px solid #8ae66e;
+}
+
+button.cyberpunk2077:hover:before,
+a.cyberpunk2077:hover:before,
+button.cyberpunk2077:focus:before,
+a.cyberpunk2077:focus:before {
+  display: block;
+  animation-name: hoverbefore;
+  animation-duration: var(--glitched-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes hover {
+  0% {
+    transform: skew(0deg);
+  }
+  60% {
+    transform: skew(0deg);
+  }
+  61% {
+    transform: skew(10deg);
+  }
+  70% {
+    transform: skew(10deg);
+  }
+  71% {
+    transform: skew(0deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+@keyframes hoverbefore {
+  0% {
+    display: none;
+    top: 0px;
+  }
+  10% {
+    display: none;
+    top: 0px;
+  }
+  11% {
+    display: block;
+    top: 10px;
+    left: calc(0px - 0px - var(--outside));
+  }
+  29% {
+    top: 10px;
+  }
+  30% {
+    display: none;
+    top: 0px;
+  }
+  50% {
+    display: none;
+    top: 0px;
+  }
+  51% {
+    display: block;
+    top: 55px;
+    filter: blur(1px);
+    height: 22px;
+  }
+  90% {
+    display: block;
+    top: 55px;
+    height: 22px;
+  }
+  91% {
+    filter: blur(0px);
+    display: none;
+    top: 0px;
+    height: 12px;
+  }
+  100% {
+    display: none;
+    top: 0px;
+  }
+}
+
+@keyframes hoverafter {
+  0% {
+    right: 45px;
+  }
+
+  10% {
+    right: 45px;
+  }
+  11% {
+    right: 35px;
+  }
+  20% {
+    transform: skew(0deg);
+  }
+  21% {
+    transform: skew(-10deg);
+  }
+  40% {
+    transform: skew(-10deg);
+  }
+  41% {
+    transform: skew(0deg);
+  }
+  49% {
+    right: 35px;
+  }
+  50% {
+    right: 55px;
+  }
+
+  60% {
+    right: 55px;
+  }
+  61% {
+    right: 35px;
+  }
+  70% {
+    transform: skew(0deg);
+  }
+  71% {
+    transform: skew(10deg);
+  }
+  80% {
+    transform: skew(10deg);
+  }
+  81% {
+    transform: skew(0deg);
+  }
+  100% {
+    right: 35px;
+  }
+}
