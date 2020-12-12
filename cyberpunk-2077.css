@@ -5,14 +5,6 @@
 
 /* Buttons and links */
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f002;
-  flex-direction: column;
-}
-
 button.cyberpunk2077,
 a.cyberpunk2077 {
   --background-color: #ff003c;
