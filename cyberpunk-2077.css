@@ -22,6 +22,33 @@ body * {
 
 /* Form fields */
 
+input[type="text"].cyberpunk,
+textarea.cyberpunk {
+  width: 100%;
+  border: 30px solid #000;
+  border-left: 5px solid #000;
+  border-right: 5px solid #000;
+  border-bottom: 15px solid #000;
+  clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
+  margin-bottom: 10px;
+  padding: 12px;
+}
+
+input[type="text"].cyberpunk:after,
+textarea.cyberpunk:after {
+  content: "R-25";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 25px;
+  padding: 2px 2px 0px 2px;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  color: #000;
+  background-color: var(--yellow-color);
+  border-left: 2px solid var(--border-color);
+}
+
 /* Scrollbar */
 
 ::-webkit-scrollbar {
@@ -94,7 +121,6 @@ img.cyberpunk {
   border-right: 5px solid #000;
   border-bottom: 15px solid #000;
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
-  position: relative;
   background-color: #000;
 }
 
