@@ -54,9 +54,9 @@ body * {
 
 hr {
   height: 14px;
-  background-color : grey;
+  background-color: #000;
   width: 100%;
-  clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 1px, 100% 1px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+  clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
   animation-name: hr;
   animation-duration: var(--glitched-long-duration);
   animation-iteration-count: infinite;
@@ -90,6 +90,94 @@ hr {
 
 /* Titles */
 
+h1.cyberpunk,
+h2.cyberpunk,
+h3.cyberpunk,
+h4.cyberpunk {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: 200;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+h2.cyberpunk {
+  font-size: 1.7rem;
+  line-height: 1.9rem;
+  font-weight: 300;
+}
+
+h3.cyberpunk {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+}
+
+h4.cyberpunk {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: 700;
+}
+
+h1.cyberpunk:before,
+h2.cyberpunk:before,
+h3.cyberpunk:before,
+h4.cyberpunk:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 2px;
+    width: 100%;
+    height: 10px;
+    background-color: #000;
+    clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+}
+
+h2.cyberpunk:before {
+        clip-path: polygon(0px 5px, 35px 5px, 40px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 20px 10px, 15px 6px, 0px 6px);
+}
+
+h3.cyberpunk:before {
+        clip-path: polygon(0px 5px, 10px 5px, 15px 0px, 40px 0px, 45px 5px, 100% 5px, 100% 6px, 31px 6px, 27px 2px, 15px 2px, 8px 10px, 0px 10px);
+}
+
+h4.cyberpunk:before {
+        clip-path: polygon(0px 3px, 15px 3px, 20px 0px, 80px 0px, 85px 3px, 100% 3px, 100% 4px, 85px 4px, 80px 7px, 20px 7px, 15px 4px, 0px 4px);
+}
+
+h1.cyberpunk:after,
+h2.cyberpunk:after,
+h3.cyberpunk:after,
+h4.cyberpunk:after {
+  content: "_";
+  animation-name: hxafter;
+  animation-duration: var(--glitched-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+h3.cyberpunk:after,
+h4.cyberpunk:after {
+  animation-direction: reverse;
+  animation-duration: calc(var(--glitched-duration) / 2);
+}
+
+@keyframes hxafter {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Buttons and links */
 
 button.cyberpunk2077,
@@ -98,8 +186,8 @@ a.cyberpunk2077 {
   display: block;
   border: none;
   border-radius: 0%;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
@@ -154,8 +242,8 @@ a.cyberpunk2077:after {
   bottom: 0px;
   right: 25px;
   padding: 2px 2px 0px 2px;
-  font-size: 9px;
-  line-height: 9px;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
   color: #000;
   background-color: var(--yellow-color);
   border-left: 2px solid var(--border-color);
