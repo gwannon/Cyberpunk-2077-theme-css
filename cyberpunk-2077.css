@@ -1,9 +1,19 @@
 :root {
   --glitched-duration: 0.9s;
+  --yellow-color: #f9f002;
+  --orange-color: #ff9800;
+  --border-color: #8ae66e;
+  --red-color: #ff003c;
+  --blue-color: #136377;
+  --green-color: #446d44;
+  --purple-color: purple;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&amp;display=swap');
+
 body {
-  background-color: #f9f002;
+  background-color: var(--yellow-color);
 }
 
 /* Form fields */
@@ -11,7 +21,7 @@ body {
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-  background-color: #f9f002;
+  background-color: var(--yellow-color);
 }
 ::-webkit-scrollbar-button {
   display: none;
@@ -23,13 +33,13 @@ body {
   display: none;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #ff003c;
-  border-bottom: 2px solid #8ae66e;
-  border-right: 2px solid #8ae66e;
+  background-color: var(--red-color);
+  border-bottom: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
   transition: background var(--glitched-duration);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #ff9800;
+  background-color: var(--orange-color);
 }
 ::-webkit-scrollbar-corner {
   display: none;
@@ -48,7 +58,7 @@ body {
 
 button.cyberpunk2077,
 a.cyberpunk2077 {
-  --background-color: #ff003c;
+  --background-color: var(--red-color);
   display: block;
   border: none;
   border-radius: 0%;
@@ -62,7 +72,7 @@ a.cyberpunk2077 {
   margin: 10px;
   position: relative;
   color: #fff;
-  border-right: 3px solid #8ae66e;
+  border-right: 3px solid var(--border-color);
   clip-path: polygon(
     -15px 0%,
     calc(100% + 15px) 0%,
@@ -87,17 +97,17 @@ a.cyberpunk2077:focus {
 
 button.cyberpunk2077.green,
 a.cyberpunk2077.green {
-  --background-color: #446d44;
+  --background-color: var(--green-color);
 }
 
 button.cyberpunk2077.purple,
 a.cyberpunk2077.purple {
-  --background-color: purple;
+  --background-color: var(--purple-color);
 }
 
 button.cyberpunk2077.blue,
 a.cyberpunk2077.blue {
-  --background-color: #136377;
+  --background-color: var(--blue-color);
 }
 
 button.cyberpunk2077:after,
@@ -111,8 +121,8 @@ a.cyberpunk2077:after {
   font-size: 9px;
   line-height: 9px;
   color: #000;
-  background-color: #f9f002;
-  border-left: 2px solid #8ae66e;
+  background-color: var(--yellow-color);
+  border-left: 2px solid var(--border-color);
 }
 
 button.cyberpunk2077:hover:after,
@@ -136,8 +146,8 @@ a.cyberpunk2077:before {
   height: 12px;
   top: 0px;
   left: calc(0px - 1px - var(--outside));
-  border-left: 2px solid #8ae66e;
-  border-right: 2px solid #8ae66e;
+  border-left: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
 }
 
 button.cyberpunk2077:hover:before,
