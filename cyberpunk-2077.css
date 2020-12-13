@@ -10,6 +10,34 @@ body {
 
 /* Scrollbar */
 
+::-webkit-scrollbar {
+  background-color: #f9f002;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-track {
+  display: none;
+}
+::-webkit-scrollbar-track-piece {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ff003c;
+  border-bottom: 2px solid #8ae66e;
+  border-right: 2px solid #8ae66e;
+  transition: background var(--glitched-duration);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff9800;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-resizer {
+  display: none;
+}
+
 /* Images frames */
 
 /* Textboxes */
