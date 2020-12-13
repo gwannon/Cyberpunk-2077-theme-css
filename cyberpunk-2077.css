@@ -12,6 +12,8 @@
 
 body {
   background-color: var(--yellow-color);
+  padding: 0px;
+  margin: 0px;
 }
 
 body * {
@@ -85,6 +87,16 @@ hr {
 }
 
 /* Images frames */
+
+img.cyberpunk {
+  border: 30px solid #000;
+  border-left: 5px solid #000;
+  border-right: 5px solid #000;
+  border-bottom: 15px solid #000;
+  clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
+  position: relative;
+  background-color: #000;
+}
 
 /* Textboxes */
 
@@ -406,3 +418,36 @@ a.cyberpunk2077:focus:before {
     right: 35px;
   }
 }
+
+/* Section */
+section.cyberpunk {
+  background-color: var(--yellow-color);
+  color: #000;
+  padding: 80px 60px;
+}
+section.cyberpunk.black {
+  background-color: #000;
+  color: var(--yellow-color);
+}
+
+section.cyberpunk.black h1,
+section.cyberpunk.black h2,
+section.cyberpunk.black h3,
+section.cyberpunk.black h4 {
+  color: var(--yellow-color);
+}
+
+section.cyberpunk.black h1:before,
+section.cyberpunk.black h2:before,
+section.cyberpunk.black h3:before,
+section.cyberpunk.black h4:before,
+section.cyberpunk.black hr {
+  background-color: var(--yellow-color);
+}
+
+section.cyberpunk.black img.cyberpunk {
+  border-color: var(--yellow-color);
+  background-color: var(--yellow-color);
+}
+
+
