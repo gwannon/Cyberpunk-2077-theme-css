@@ -9,11 +9,12 @@
   --purple-color: purple;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&amp;display=swap');
-
 body {
   background-color: var(--yellow-color);
+}
+
+body * {
+  font-family: "Advent Pro", arial ;
 }
 
 /* Form fields */
@@ -48,6 +49,12 @@ body {
   display: none;
 }
 
+/* Separator */
+
+hr {
+
+}
+
 /* Images frames */
 
 /* Textboxes */
@@ -67,7 +74,6 @@ a.cyberpunk2077 {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: "Advent Pro", arial;
   padding: 35px 75px;
   margin: 10px;
   position: relative;
@@ -83,6 +89,7 @@ a.cyberpunk2077 {
   cursor: pointer;
   background-color: var(--background-color);
   outline: none;
+  display: inline-block;
 }
 
 button.cyberpunk2077:hover,
