@@ -51,7 +51,7 @@ button.cyberpunk2077:hover,
 a.cyberpunk2077:hover,
 button.cyberpunk2077:focus,
 a.cyberpunk2077:focus {
-  animation-name: hover;
+  animation-name: buttonhover;
   animation-duration: var(--glitched-duration);
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
@@ -91,7 +91,7 @@ button.cyberpunk2077:hover:after,
 a.cyberpunk2077:hover:after,
 button.cyberpunk2077:focus:after,
 a.cyberpunk2077:focus:after {
-  animation-name: hoverafter;
+  animation-name: buttonhoverafter;
   animation-duration: var(--glitched-duration);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -117,13 +117,13 @@ a.cyberpunk2077:hover:before,
 button.cyberpunk2077:focus:before,
 a.cyberpunk2077:focus:before {
   display: block;
-  animation-name: hoverbefore;
+  animation-name: buttonhoverbefore;
   animation-duration: var(--glitched-duration);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-@keyframes hover {
+@keyframes buttonhover {
   0% {
     transform: skew(0deg);
   }
@@ -144,7 +144,7 @@ a.cyberpunk2077:focus:before {
   }
 }
 
-@keyframes hoverbefore {
+@keyframes buttonhoverbefore {
   0% {
     display: none;
     top: 0px;
@@ -192,7 +192,7 @@ a.cyberpunk2077:focus:before {
   }
 }
 
-@keyframes hoverafter {
+@keyframes buttonhoverafter {
   0% {
     right: 45px;
   }
