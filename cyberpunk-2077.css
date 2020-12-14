@@ -2,6 +2,7 @@
   --glitched-duration: 0.9s;
   --glitched-long-duration: 3s;
   --yellow-color: #f9f002;
+  --yellow-color-opacity: #f9f00242;
   --orange-color: #ff9800;
   --border-color: #8ae66e;
   --red-color: #ff003c;
@@ -24,7 +25,7 @@ body * {
 
 input[type="text"].cyberpunk,
 textarea.cyberpunk {
-    width: calc(100% - 30px);
+  width: calc(100% - 30px);
   border: 30px solid #000;
   border-left: 5px solid #000;
   border-right: 5px solid #000;
@@ -64,7 +65,6 @@ input[type="radio"].cyberpunk:checked:after {
   background-color: var(--border-color);
   left: 10px;
 }
-
 
 input[type="checkbox"].cyberpunk {
   border-radius: 15%;
@@ -181,15 +181,63 @@ hr {
 /* Images frames */
 
 img.cyberpunk {
-  border: 30px solid #000;
-  border-left: 5px solid #000;
-  border-right: 5px solid #000;
-  border-bottom: 15px solid #000;
+  padding: 30px ;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 15px;
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
   background-color: #000;
 }
 
-/* Textboxes */
+/* Paragraphs and lists */
+
+p.cyberpunk {
+  padding: 30px 15px 30px;
+  border: 30px solid #000;
+  border-right: 5px solid #000;
+  border-left: 5px solid #000;
+  border-bottom: 20px solid #000;
+  padding: 5px;
+  clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
+  background-color: var(--yellow-color);
+  font-size: 1.2rem;
+  position: relative;
+}
+
+p.cyberpunk.inverse {
+  border: none;
+  padding: 40px 15px 30px;
+  clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
+  background-color: #000;
+  color: var(--yellow-color);
+}
+
+p.cyberpunk:before {
+  content: "P-14";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  right: 25px;
+  padding: 2px 2px 0px 2px;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  color: #000;
+  background-color: var(--yellow-color);
+  border-left: 2px solid var(--border-color);
+}
+
+p.cyberpunk.inverse:before {
+  content: "T-71";
+  right:90px;
+  bottom: 9px;
+}
+
+p.cyberpunk:hover:before {
+  animation-name: buttonhoverafter;
+  animation-duration: var(--glitched-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
 /* Titles */
 
@@ -252,7 +300,8 @@ h4.cyberpunk:before {
 h1.cyberpunk:after,
 h2.cyberpunk:after,
 h3.cyberpunk:after,
-h4.cyberpunk:after {
+h4.cyberpunk:after,
+p.cyberpunk:after {
   content: "_";
   animation-name: hxafter;
   animation-duration: var(--glitched-duration);
@@ -541,6 +590,24 @@ section.cyberpunk.black {
   color: var(--yellow-color);
 }
 
+.dotted,
+.dotted:before,
+.dotted:after {
+  background: #000;
+  background-image: radial-gradient(var(--yellow-color-opacity) 1px, transparent 0);
+  background-size: 5px 5px;
+  background-position: -13px -3px;
+}
+
+section.cyberpunk.black .dotted,
+section.cyberpunk.black .dotted:before,
+section.cyberpunk.black .dotted:after {
+  background: var(--yellow-color);
+  background-image: radial-gradient(#00000021 1px, transparent 0);
+  background-size: 5px 5px;
+  background-position: -13px -3px;
+}
+
 section.cyberpunk:before,
 section.cyberpunk.black:before {
   content: " ";
@@ -557,7 +624,6 @@ section.cyberpunk.black:before {
 section.cyberpunk:before {
   background-color: #000;
 }
-
 
 section.cyberpunk:nth-child(even):after,
 section.cyberpunk:nth-child(odd):before {
@@ -580,7 +646,6 @@ section.cyberpunk.black hr {
 }
 
 section.cyberpunk.black img.cyberpunk {
-  border-color: var(--yellow-color);
   background-color: var(--yellow-color);
 }
 
@@ -611,4 +676,18 @@ section.cyberpunk.black input[type="checkbox"].cyberpunk:checked:before {
 
 section.cyberpunk.black input[type="checkbox"].cyberpunk:checked:after {
   background-color: var(--red-color);
+}
+
+section.cyberpunk.black p.cyberpunk {
+  border: 30px solid var(--yellow-color);
+  border-right: 5px solid var(--yellow-color);
+  border-left: 5px solid var(--yellow-color);
+  border-bottom: 20px solid var(--yellow-color);
+  background-color: #000;
+}
+
+section.cyberpunk.black p.cyberpunk.inverse {
+  border: none;
+  background-color: var(--yellow-color);
+  color: #000;
 }
