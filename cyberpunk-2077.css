@@ -34,6 +34,37 @@ textarea.cyberpunk {
   padding: 12px;
 }
 
+input[type="radio"].cyberpunk {
+  border-radius: 15%;
+  z-index: 100;
+  height: 14px;
+  width: 20px;
+  appearance: none;
+  outline: none;
+  background-color: #000;
+  cursor: pointer;
+  position: relative;
+  margin: 0px;
+  display: inline-block;
+}
+
+input[type="radio"].cyberpunk:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 6px;
+  background-color: var(--yellow-color);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: background 0.3s, left 0.3s;
+}
+
+input[type="radio"].cyberpunk:checked:after {
+  background-color: var(--border-color);
+  left: 10px;
+}
+
 
 input[type="checkbox"].cyberpunk {
   border-radius: 15%;
@@ -59,7 +90,7 @@ input[type="checkbox"].cyberpunk:before {
   border-top: 2px solid transparent;
   border-radius: 50%;
   position: absolute;
-  top: 3px;
+  top: 5px;
   left: 4px;
 }
 
@@ -264,7 +295,7 @@ a.cyberpunk2077 {
   text-transform: uppercase;
   font-weight: 600;
   padding: 35px 75px;
-  margin: 10px;
+  margin: 10px 20px 10px 0px;
   position: relative;
   color: #fff;
   border-right: 3px solid var(--border-color);
@@ -527,6 +558,12 @@ section.cyberpunk:before {
   background-color: #000;
 }
 
+
+section.cyberpunk:nth-child(even):after,
+section.cyberpunk:nth-child(odd):before {
+ transform: scaleX(-1);
+}
+
 section.cyberpunk.black h1,
 section.cyberpunk.black h2,
 section.cyberpunk.black h3,
@@ -554,4 +591,24 @@ section.cyberpunk.black input[type="text"].cyberpunk {
   color: var(--yellow-color); 
 }
 
+section.cyberpunk.black input[type="radio"].cyberpunk {
+  background-color: var(--yellow-color); 
+}
 
+section.cyberpunk.black input[type="radio"].cyberpunk:after {
+  background-color:  #000;
+}
+
+section.cyberpunk.black input[type="radio"].cyberpunk:checked:after {
+  background-color: var(--red-color);
+}
+
+
+section.cyberpunk.black input[type="checkbox"].cyberpunk:checked:before {
+  border-color: var(--red-color);
+  border-top-color: transparent;
+}
+
+section.cyberpunk.black input[type="checkbox"].cyberpunk:checked:after {
+  background-color: var(--red-color);
+}
