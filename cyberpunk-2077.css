@@ -24,7 +24,7 @@ body * {
 
 input[type="text"].cyberpunk,
 textarea.cyberpunk {
-  width: 100%;
+    width: calc(100% - 30px);
   border: 30px solid #000;
   border-left: 5px solid #000;
   border-right: 5px solid #000;
@@ -34,19 +34,53 @@ textarea.cyberpunk {
   padding: 12px;
 }
 
-input[type="text"].cyberpunk:after,
-textarea.cyberpunk:after {
-  content: "R-25";
+
+input[type="checkbox"].cyberpunk {
+  border-radius: 15%;
+  z-index: 100;
+  height: 20px;
+  width: 20px;
+  appearance: none;
+  outline: none;
+  background-color: #000;
+  cursor: pointer;
+  position: relative;
+  margin: 0px;
+  margin-bottom: -3px;
+  display: inline-block;
+}
+
+input[type="checkbox"].cyberpunk:before {
+  content: "";
   display: block;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--yellow-color);
+  border-top: 2px solid transparent;
+  border-radius: 50%;
   position: absolute;
-  bottom: 0px;
-  right: 25px;
-  padding: 2px 2px 0px 2px;
-  font-size: 0.6rem;
-  line-height: 0.6rem;
-  color: #000;
+  top: 3px;
+  left: 4px;
+}
+
+input[type="checkbox"].cyberpunk:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 7px;
   background-color: var(--yellow-color);
-  border-left: 2px solid var(--border-color);
+  position: absolute;
+  top: 3px;
+  left: 9px;
+}
+
+input[type="checkbox"].cyberpunk:checked:before {
+  border-color: var(--border-color);
+  border-top-color: transparent;
+}
+
+input[type="checkbox"].cyberpunk:checked:after {
+  background-color: var(--border-color);
 }
 
 /* Scrollbar */
@@ -449,11 +483,48 @@ a.cyberpunk2077:focus:before {
 section.cyberpunk {
   background-color: var(--yellow-color);
   color: #000;
-  padding: 80px 60px;
+  padding: 60px 60px;
+  position: relative;
+    margin-top: -1px;
+  margin-bottom: -1px;
 }
+section.cyberpunk:after,
+section.cyberpunk.clack:after {
+  content: " ";
+  display: block;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  background-color: #000;
+  position: absolute;
+  clip-path: polygon(0% 0%, 22% 0%, calc(22% + 30px) 30px, 52% 30px, calc(52% + 15px) 15px, 70% 15px, calc(70% + 15px) 30px, 90% 30px, calc(90% + 30px) 0px, 100% 0px, 100% 30px, 0px 30px);
+}
+
+section.cyberpunk.black:after {
+  background-color: var(--yellow-color);
+}
+
 section.cyberpunk.black {
   background-color: #000;
   color: var(--yellow-color);
+}
+
+section.cyberpunk:before,
+section.cyberpunk.black:before {
+  content: " ";
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  background-color: var(--yellow-color);
+  position: absolute;
+  clip-path: polygon(calc(22% + 28px) -1px, calc(22% + 45px) 15px, 34% 15px, calc(34% + 15px) -1px, 70% 0px)
+}
+
+section.cyberpunk:before {
+  background-color: #000;
 }
 
 section.cyberpunk.black h1,
@@ -474,6 +545,13 @@ section.cyberpunk.black hr {
 section.cyberpunk.black img.cyberpunk {
   border-color: var(--yellow-color);
   background-color: var(--yellow-color);
+}
+
+section.cyberpunk.black textarea.cyberpunk,
+section.cyberpunk.black input[type="text"].cyberpunk {
+  border-color: var(--yellow-color);
+  background-color: #000;
+  color: var(--yellow-color); 
 }
 
 
