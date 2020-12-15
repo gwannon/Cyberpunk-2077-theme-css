@@ -9,6 +9,8 @@
   --blue-color: #136377;
   --green-color: #446d44;
   --purple-color: purple;
+
+  --neon-color: #39ff14;
 }
 
 body {
@@ -24,7 +26,8 @@ body * {
 /* Form fields */
 
 input[type="text"].cyberpunk,
-textarea.cyberpunk {
+textarea.cyberpunk,
+select.cyberpunk {
   width: calc(100% - 30px);
   border: 30px solid #000;
   border-left: 5px solid #000;
@@ -33,6 +36,31 @@ textarea.cyberpunk {
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
   margin-bottom: 10px;
   padding: 12px;
+}
+
+textarea.cyberpunk {
+  min-height: 120px;
+  clip-path: polygon(0px 0px, 50px 0px, 75px 26px, 105px 26px, 130px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
+  
+}
+
+select.cyberpunk {
+  width: 100%;
+  appearance: none;
+  position: relative;
+  clip-path: polygon(0px 25px, 60px 25px, 85px 0px, calc(60% - 25px) 0px, 60% 25px, calc(100% - 80px) 25px, calc(100% - 55px) 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px calc(100% - 0px), 0% calc(100% - 10px));
+}
+
+input[type="text"].cyberpunk,
+textarea.cyberpunk,
+select.cyberpunk {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+select.cyberpunk option {
+  color: var(--yellow-color);
+  background-color: #000;
 }
 
 input[type="radio"].cyberpunk {
@@ -146,11 +174,15 @@ input[type="checkbox"].cyberpunk:checked:after {
 
 /* Separator */
 
-hr {
+hr.cyberpunk {
   height: 14px;
   background-color: #000;
   width: 100%;
-  clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+  border: none;
+  clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+}
+
+hr.cyberpunk.glitched {
   animation-name: hr;
   animation-duration: var(--glitched-long-duration);
   animation-iteration-count: infinite;
@@ -160,21 +192,55 @@ hr {
 @keyframes hr {
   0% {
     transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
   }
   15% {
     transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
   }
   16% {
     transform: skew(20deg);
+    clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+    margin-left: -20px;
+  
   }
   20% {
-    transform: skew(20deg);
+    transform: skew(-20deg);
+    clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+    margin-left: 20px;  
   }
   21% {
     transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
+  }
+  65% {
+    transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
+  }
+  66% {
+    transform: skew(20deg);
+    clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+    margin-left: -5px;
+  
+  }
+  70% {
+    transform: skew(40deg);
+    clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+    margin-left: 20px;  
+  }
+  71% {
+    transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
   }
   100% {
-    right: 35px;
+    transform: skew(0deg);
+    clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
+    margin-left: 0px;
   }
 }
 
@@ -187,6 +253,7 @@ img.cyberpunk {
   padding-bottom: 15px;
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
   background-color: #000;
+  max-width: calc(100% - 10px);
 }
 
 /* Paragraphs and lists */
@@ -795,7 +862,8 @@ section.cyberpunk.black img.cyberpunk {
 }
 
 section.cyberpunk.black textarea.cyberpunk,
-section.cyberpunk.black input[type="text"].cyberpunk {
+section.cyberpunk.black input[type="text"].cyberpunk,
+section.cyberpunk.black select.cyberpunk {
   border-color: var(--yellow-color);
   background-color: #000;
   color: var(--yellow-color); 
