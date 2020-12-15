@@ -11,5 +11,8 @@ This is a theme in CSS3 to simulate the interfaxes of the game CyberPunk 2077.
 * Titles https://codepen.io/gwannon/pen/mdrRRPN
 * Sections https://codepen.io/gwannon/pen/dypvPPy
 
-# Fonts
+# Recomended fonts
 * Advent Pro https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&display=swap
+* Barlow https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&display=swap
+* Tomorrow https://fonts.googleapis.com/css2?family=Tomorrow:wght@100;200;300;400;500;600;700&display=swap
+* Oxanium https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700&display=swap
