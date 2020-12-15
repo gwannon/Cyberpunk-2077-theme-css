@@ -220,22 +220,26 @@ hr.cyberpunk.glitched {
     transform: skew(0deg);
     clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
     margin-left: 0px;
+    transform: scaleX(1);
   }
   66% {
     transform: skew(20deg);
     clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
     margin-left: -5px;
+    transform: scaleX(-1);
   
   }
   70% {
     transform: skew(40deg);
     clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
     margin-left: 20px;  
+    transform: scaleX(-1);
   }
   71% {
     transform: skew(0deg);
     clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
     margin-left: 0px;
+    transform: scaleX(0);
   }
   100% {
     transform: skew(0deg);
