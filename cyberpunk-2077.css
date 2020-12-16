@@ -391,11 +391,11 @@ ul.cyberpunk li.glitched:nth-child(4n+4) {
 
 @keyframes liglitched {
   0% {
-    transform: skew(-20deg);
+    transform: skew(-5deg);
     margin-left: -4px;
   }
   10% {
-    transform: skew(-20deg);
+    transform: skew(-5deg);
     margin-left: inherit;
   }
   11% {
@@ -408,11 +408,11 @@ ul.cyberpunk li.glitched:nth-child(4n+4) {
   }
   51% {
     transform: skew(10deg);
-    margin-left: 40px;
+    margin-left: 5px;
   }
   59% {
     transform: skew(10deg);
-    margin-left: 40px;
+    margin-left: 5px;
   }
   60% {
     transform: skew(0deg);
@@ -630,6 +630,69 @@ p.cyberpunk:after {
   animation-duration: var(--glitched-duration);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+p.cyberpunk.scannedh,
+p.cyberpunk.scannedv {
+  position: relative;
+}
+
+p.cyberpunk.scannedh:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--border-color) !important;
+  box-shadow: 0px 0px 10px 4px var(--border-color);
+  animation-name: scannedh;
+  animation-duration: var(--glitched-long-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes scannedh {
+  0% {
+    top: -27px;
+  }
+  50% {
+  }
+  51% {
+  }
+  100% {
+    top: calc(100% + 12px);
+  }
+}
+
+p.cyberpunk.scannedv:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  height: calc(100% + 55px);
+  width: 3px;
+  background-color: var(--border-color) !important;
+  box-shadow: 0px 0px 10px 4px var(--border-color);
+  animation-name: scannedv;
+  animation-duration: calc(var(--glitched-long-duration) * 3);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes scannedv {
+  0% {
+    left: 0px;
+  }
+  50% {
+  }
+  51% {
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 h3.cyberpunk:after,
