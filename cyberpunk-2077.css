@@ -316,6 +316,113 @@ p.cyberpunk:hover:before {
   animation-timing-function: linear;
 }
 
+ul.cyberpunk li {
+  list-style: none;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+ul.cyberpunk li:before {
+  content: " ";
+  top: 0px;
+  left: calc(-1.2rem - 10px);
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #000;
+  position: absolute;
+  display: block;
+  clip-path: polygon(0% 10%, 100% 70%, 40% 100%, 50% 70%);
+}
+ol.cyberpunk {
+  list-style-type:hiragana-iroha; counter-reset: li
+}
+
+ol.cyberpunk li {
+  list-style: none;
+  position: relative;
+  font-size: 1.2rem;
+  counter-increment: li;
+}
+
+ol.cyberpunk li:before {
+  content: counter(li);
+  top: 0px;
+  left: calc(-1.2rem - 10px);
+  width: 1.2rem;
+  height: 1.2rem;
+  color:var(--yellow-color);
+  background-color: #000;
+  font-weight: 700;
+  position: absolute;
+  display: block;
+  clip-path: polygon(0% 0%, 60% 0%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+ol.cyberpunk li.glitched,
+ul.cyberpunk li.glitched {
+  animation-name: liglitched;
+  animation-duration: var(--glitched-duration);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+ol.cyberpunk li.glitched:nth-child(3n+3),
+ul.cyberpunk li.glitched:nth-child(1) {
+  animation-duration: calc(var(--glitched-duration) * 0.5);
+}
+
+ol.cyberpunk li.glitched:nth-child(5n+5),
+ul.cyberpunk li.glitched:nth-child(5n+5) {
+  animation-duration: calc(var(--glitched-duration) * 0.7);
+  animation-timing-function: ease-out; 
+}
+
+ol.cyberpunk li.glitched:nth-child(2n+2),
+ul.cyberpunk li.glitched:nth-child(2n+2) {
+  animation-duration: calc(var(--glitched-duration) * 1.5);
+  animation-timing-function: ease-in-out;
+}
+
+ol.cyberpunk li.glitched:nth-child(4n+4),
+ul.cyberpunk li.glitched:nth-child(4n+4) {
+  animation-duration: calc(var(--glitched-duration) * 1.2);
+  animation-timing-function: ease-in;
+}
+
+@keyframes liglitched {
+  0% {
+    transform: skew(-20deg);
+    margin-left: -4px;
+  }
+  10% {
+    transform: skew(-20deg);
+    margin-left: inherit;
+  }
+  11% {
+    transform: skew(0deg);
+    margin-left: 2px;
+  }
+  50% {
+    transform: skew(0deg);
+    margin-left: inherit;
+  }
+  51% {
+    transform: skew(10deg);
+    margin-left: 40px;
+  }
+  59% {
+    transform: skew(10deg);
+    margin-left: 40px;
+  }
+  60% {
+    transform: skew(0deg);
+    margin-left: inherit;
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
 /* Titles */
 
 h1.cyberpunk,
@@ -908,4 +1015,13 @@ section.cyberpunk.black p.cyberpunk.inverse {
   background-color: var(--yellow-color);
   color: #000;
   border-right: 2px solid var(--border-color);
+}
+
+section.cyberpunk.black ul.cyberpunk li:before {
+  background-color: var(--yellow-color);
+}
+
+section.cyberpunk.black ol.cyberpunk li:before {
+  color: #000;
+  background-color: var(--yellow-color);
 }
