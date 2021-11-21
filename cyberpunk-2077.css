@@ -9,7 +9,6 @@
   --blue-color: #136377;
   --green-color: #446d44;
   --purple-color: purple;
-
   --neon-color: #39ff14;
 }
 
@@ -26,6 +25,9 @@ body * {
 /* Form fields */
 
 input[type="text"].cyberpunk,
+input[type="date"].cyberpunk,
+input[type="number"].cyberpunk,
+input[type="phone"].cyberpunk,
 textarea.cyberpunk,
 select.cyberpunk {
   width: calc(100% - 30px);
@@ -52,6 +54,9 @@ select.cyberpunk {
 }
 
 input[type="text"].cyberpunk,
+input[type="date"].cyberpunk,
+input[type="number"].cyberpunk,
+input[type="phone"].cyberpunk,
 textarea.cyberpunk,
 select.cyberpunk {
   font-size: 1.7rem;
@@ -1072,6 +1077,9 @@ section.cyberpunk.black img.cyberpunk {
 
 section.cyberpunk.black textarea.cyberpunk,
 section.cyberpunk.black input[type="text"].cyberpunk,
+section.cyberpunk.black input[type="date"].cyberpunk,
+section.cyberpunk.black input[type="number"].cyberpunk,
+section.cyberpunk.black input[type="phone"].cyberpunk,
 section.cyberpunk.black select.cyberpunk {
   border-color: var(--yellow-color);
   background-color: #000;
@@ -1122,4 +1130,56 @@ section.cyberpunk.black ul.cyberpunk li:before {
 section.cyberpunk.black ol.cyberpunk li:before {
   color: #000;
   background-color: var(--yellow-color);
+}
+
+/* Aside */
+aside.cyberpunk {
+  --width: 230px;
+  position: fixed;
+  top: 50%;
+  left: calc(100% - 33px);
+  width: var(--width);
+  transition: left 0.3s;
+}
+
+aside.cyberpunk:hover {
+  left: calc(100% - var(--width) + 5px);
+}
+
+aside.cyberpunk ul {
+  padding: 0;
+  margin: 0;
+}
+
+aside.cyberpunk ul li {
+  display: block;
+  background-color: var(--yellow-color);
+  border: 1px solid #000;
+  border-right: none;
+  font-size: 1.3rem;
+  margin: 3px 0px;
+  transform: skew(-15deg);
+  transition: background 0.3s, color 0.3s;
+  width: 100%;
+}
+
+aside.cyberpunk ul li:hover {
+  background-color: #000;
+  border: 1px solid var(--yellow-color); 
+}
+
+aside.cyberpunk ul li a {
+  display: block;
+  padding: 5px 10px;
+  color: #000;
+  transform: skew(15deg);
+  transition: color 0.3s;
+}
+
+aside.cyberpunk ul li:hover a {
+  color: var(--yellow-color);
+}
+
+aside.cyberpunk a:after {
+  display: none;
 }
