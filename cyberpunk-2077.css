@@ -1175,7 +1175,7 @@ aside.cyberpunk ul li {
   transform: skew(-15deg);
   transition: background 0.3s, color 0.3s;
   width: 100%;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 90%, 0% 100%, 1% 62%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 40% calc(100% - 9px), 0% 100%, 1% 62%);
 }
 
 aside.cyberpunk ul li:hover {
