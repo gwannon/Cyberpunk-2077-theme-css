@@ -19,8 +19,6 @@
   font-style: normal;
 }
 
-
-
 body {
   background-color: var(--yellow-color);
   padding: 0px;
@@ -57,18 +55,10 @@ input[type="password"].cyberpunk {
 	font-style: normal;
 	font-weight: 400;
 	speak: none;
-
-	/* For safety - reset parent styles, that can break glyph codes*/
 	font-variant: normal;
 	text-transform: none;
-
-	/* Font smoothing. That was taken from TWBS */
-	-webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	/* Uncomment for 3D effect */
-	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-
-	/* add spacing to better separate each image */
 	letter-spacing: 2px;
 }
 
