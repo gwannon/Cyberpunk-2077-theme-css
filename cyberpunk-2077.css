@@ -1137,7 +1137,7 @@ aside.cyberpunk {
   --width: 230px;
   position: fixed;
   top: 50%;
-  left: calc(100% - 33px);
+  left: calc(100% - 43px);
   width: var(--width);
   transition: left 0.3s;
 }
@@ -1155,6 +1155,7 @@ aside.cyberpunk ul li {
   display: block;
   background-color: var(--yellow-color);
   border: 1px solid #000;
+  border-left: 10px solid #000;
   border-right: none;
   font-size: 1.3rem;
   margin: 3px 0px;
