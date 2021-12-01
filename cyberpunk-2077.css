@@ -1092,6 +1092,7 @@ section.cyberpunk.black input[type="text"].cyberpunk,
 section.cyberpunk.black input[type="date"].cyberpunk,
 section.cyberpunk.black input[type="number"].cyberpunk,
 section.cyberpunk.black input[type="phone"].cyberpunk,
+section.cyberpunk.black input[type="password"].cyberpunk,
 section.cyberpunk.black select.cyberpunk {
   border-color: var(--yellow-color);
   background-color: #000;
