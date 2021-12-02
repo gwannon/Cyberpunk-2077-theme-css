@@ -54,20 +54,19 @@ select.cyberpunk {
 }
 
 input[type="password"].cyberpunk {
-	font-family: 'Hacked';
-	font-style: normal;
-	font-weight: 400;
-	font-variant: normal;
-	text-transform: none;
+  font-family: 'Hacked';
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	letter-spacing: 2px;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 2px;
 }
 
 textarea.cyberpunk {
   min-height: 120px;
   clip-path: polygon(0px 0px, 50px 0px, 75px 26px, 105px 26px, 130px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
-  
 }
 
 select.cyberpunk {
@@ -430,6 +429,7 @@ ul.cyberpunk li:before {
   display: block;
   clip-path: polygon(0% 10%, 100% 70%, 40% 100%, 50% 70%);
 }
+
 ol.cyberpunk {
   list-style-type:hiragana-iroha; counter-reset: li
 }
@@ -590,15 +590,15 @@ h1.cyberpunk:before,
 h2.cyberpunk:before,
 h3.cyberpunk:before,
 h4.cyberpunk:before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0px;
-    left: 2px;
-    width: 100%;
-    height: 10px;
-    background-color: #000;
-    clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 2px;
+  width: 100%;
+  height: 10px;
+  background-color: #000;
+  clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
 }
 
 h1.cyberpunk.glitched {
@@ -745,11 +745,11 @@ h2.cyberpunk.glitched:before {
 }
 
 h3.cyberpunk:before {
-        clip-path: polygon(0px 5px, 10px 5px, 15px 0px, 40px 0px, 45px 5px, 100% 5px, 100% 6px, 31px 6px, 27px 2px, 15px 2px, 8px 10px, 0px 10px);
+  clip-path: polygon(0px 5px, 10px 5px, 15px 0px, 40px 0px, 45px 5px, 100% 5px, 100% 6px, 31px 6px, 27px 2px, 15px 2px, 8px 10px, 0px 10px);
 }
 
 h4.cyberpunk:before {
-        clip-path: polygon(0px 3px, 15px 3px, 20px 0px, 80px 0px, 85px 3px, 100% 3px, 100% 4px, 85px 4px, 80px 7px, 20px 7px, 15px 4px, 0px 4px);
+  clip-path: polygon(0px 3px, 15px 3px, 20px 0px, 80px 0px, 85px 3px, 100% 3px, 100% 4px, 85px 4px, 80px 7px, 20px 7px, 15px 4px, 0px 4px);
 }
 
 h1.cyberpunk:after,
@@ -1005,7 +1005,7 @@ section.cyberpunk {
   color: #000;
   padding: 60px 60px;
   position: relative;
-    margin-top: -1px;
+  margin-top: -1px;
   margin-bottom: -1px;
 }
 section.cyberpunk:after,
@@ -1108,7 +1108,6 @@ section.cyberpunk.black input[type="date"]::-webkit-calendar-picker-indicator{
   filter: invert(82%) sepia(91%) saturate(803%) hue-rotate(352deg) brightness(107%) contrast(104%);
 }
 
-
 section.cyberpunk.black input[type="radio"].cyberpunk {
   background-color: var(--yellow-color); 
 }
@@ -1120,7 +1119,6 @@ section.cyberpunk.black input[type="radio"].cyberpunk:after {
 section.cyberpunk.black input[type="radio"].cyberpunk:checked:after {
   background-color: var(--red-color);
 }
-
 
 section.cyberpunk.black input[type="checkbox"].cyberpunk:checked:before {
   border-color: var(--red-color);
@@ -1156,6 +1154,7 @@ section.cyberpunk.black ol.cyberpunk li:before {
 }
 
 /* Aside */
+
 aside.cyberpunk {
   --width: 230px;
   position: fixed;
