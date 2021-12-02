@@ -33,6 +33,8 @@ body * {
 
 input[type="text"].cyberpunk,
 input[type="date"].cyberpunk,
+input[type="time"].cyberpunk,
+input[type="file"].cyberpunk,
 input[type="number"].cyberpunk,
 input[type="phone"].cyberpunk,
 input[type="password"].cyberpunk,
@@ -48,13 +50,13 @@ select.cyberpunk {
   padding: 12px;
   font-size: 1.7rem;
   font-weight: 700;
+  /*caret-shape: underscore;*/
 }
 
 input[type="password"].cyberpunk {
 	font-family: 'Hacked';
 	font-style: normal;
 	font-weight: 400;
-	speak: none;
 	font-variant: normal;
 	text-transform: none;
   -webkit-font-smoothing: antialiased;
@@ -1090,6 +1092,8 @@ section.cyberpunk.black img.cyberpunk {
 section.cyberpunk.black textarea.cyberpunk,
 section.cyberpunk.black input[type="text"].cyberpunk,
 section.cyberpunk.black input[type="date"].cyberpunk,
+section.cyberpunk.black input[type="time"].cyberpunk,
+section.cyberpunk.black input[type="file"].cyberpunk,
 section.cyberpunk.black input[type="number"].cyberpunk,
 section.cyberpunk.black input[type="phone"].cyberpunk,
 section.cyberpunk.black input[type="password"].cyberpunk,
@@ -1098,6 +1102,12 @@ section.cyberpunk.black select.cyberpunk {
   background-color: #000;
   color: var(--yellow-color); 
 }
+
+section.cyberpunk.black input[type="time"]::-webkit-calendar-picker-indicator,
+section.cyberpunk.black input[type="date"]::-webkit-calendar-picker-indicator{
+  filter: invert(82%) sepia(91%) saturate(803%) hue-rotate(352deg) brightness(107%) contrast(104%);
+}
+
 
 section.cyberpunk.black input[type="radio"].cyberpunk {
   background-color: var(--yellow-color); 
