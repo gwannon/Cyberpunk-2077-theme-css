@@ -23,10 +23,11 @@ body {
   background-color: var(--yellow-color);
   padding: 0px;
   margin: 0px;
+  font-size: 20px;
 }
 
 body * {
-  font-family: "Advent Pro", arial ;
+  font-family: "Advent Pro", arial;
 }
 
 /* Form fields */
@@ -39,7 +40,16 @@ input[type="number"].cyberpunk,
 input[type="phone"].cyberpunk,
 input[type="password"].cyberpunk,
 textarea.cyberpunk,
-select.cyberpunk {
+select.cyberpunk,
+.cyberpunk input[type="text"],
+.cyberpunk input[type="date"],
+.cyberpunk input[type="time"],
+.cyberpunk input[type="file"],
+.cyberpunk input[type="number"],
+.cyberpunk input[type="phone"],
+.cyberpunk input[type="password"],
+.cyberpunk textarea,
+.cyberpunk select {
   width: calc(100% - 30px);
   border: 30px solid #000;
   border-left: 5px solid #000;
@@ -53,7 +63,8 @@ select.cyberpunk {
   /*caret-shape: underscore;*/
 }
 
-input[type="password"].cyberpunk {
+input[type="password"].cyberpunk,
+.cyberpunk input[type="password"] {
   font-family: 'Hacked';
   font-style: normal;
   font-weight: 400;
@@ -64,24 +75,28 @@ input[type="password"].cyberpunk {
   letter-spacing: 2px;
 }
 
-textarea.cyberpunk {
+textarea.cyberpunk,
+.cyberpunk textarea {
   min-height: 120px;
   clip-path: polygon(0px 0px, 50px 0px, 75px 26px, 105px 26px, 130px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
 }
 
-select.cyberpunk {
+select.cyberpunk,
+.cyberpunk select {
   width: 100%;
   appearance: none;
   position: relative;
   clip-path: polygon(0px 25px, 60px 25px, 85px 0px, calc(60% - 25px) 0px, 60% 25px, calc(100% - 80px) 25px, calc(100% - 55px) 0px, 100% 0px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px calc(100% - 0px), 0% calc(100% - 10px));
 }
 
-select.cyberpunk option {
+select.cyberpunk option,
+.cyberpunk select option {
   color: var(--yellow-color);
   background-color: #000;
 }
 
-input[type="radio"].cyberpunk {
+input[type="radio"].cyberpunk,
+.cyberpunk input[type="radio"] {
   border-radius: 15%;
   z-index: 100;
   height: 14px;
@@ -95,7 +110,8 @@ input[type="radio"].cyberpunk {
   display: inline-block;
 }
 
-input[type="radio"].cyberpunk:after {
+input[type="radio"].cyberpunk:after,
+.cyberpunk input[type="radio"]:after {
   content: "";
   display: block;
   width: 8px;
@@ -107,12 +123,14 @@ input[type="radio"].cyberpunk:after {
   transition: background 0.3s, left 0.3s;
 }
 
-input[type="radio"].cyberpunk:checked:after {
+input[type="radio"].cyberpunk:checked:after ,
+.cyberpunk input[type="radio"]:checked:after{
   background-color: var(--border-color);
   left: 10px;
 }
 
-input[type="checkbox"].cyberpunk {
+input[type="checkbox"].cyberpunk,
+.cyberpunk input[type="checkbox"] {
   border-radius: 15%;
   z-index: 100;
   height: 20px;
@@ -127,7 +145,8 @@ input[type="checkbox"].cyberpunk {
   display: inline-block;
 }
 
-input[type="checkbox"].cyberpunk:before {
+input[type="checkbox"].cyberpunk:before,
+.cyberpunk input[type="checkbox"]:before {
   content: "";
   display: block;
   width: 8px;
@@ -140,7 +159,8 @@ input[type="checkbox"].cyberpunk:before {
   left: 4px;
 }
 
-input[type="checkbox"].cyberpunk:after {
+input[type="checkbox"].cyberpunk:after,
+.cyberpunk input[type="checkbox"]:after {
   content: "";
   display: block;
   width: 2px;
@@ -151,13 +171,21 @@ input[type="checkbox"].cyberpunk:after {
   left: 9px;
 }
 
-input[type="checkbox"].cyberpunk:checked:before {
+input[type="checkbox"].cyberpunk:checked:before,
+.cyberpunk input[type="checkbox"]:checked:before {
   border-color: var(--border-color);
   border-top-color: transparent;
 }
 
-input[type="checkbox"].cyberpunk:checked:after {
+input[type="checkbox"].cyberpunk:checked:after,
+.cyberpunk input[type="checkbox"]:checked:after {
   background-color: var(--border-color);
+}
+
+.cyberpunk fieldset,
+fieldset.cyberpunk {
+  border: 3px dotted var(--purple-color);
+  margin: 10px 0px;
 }
 
 /* Scrollbar */
@@ -268,7 +296,8 @@ hr.cyberpunk.glitched {
 
 /* Images frames */
 
-img.cyberpunk {
+img.cyberpunk,
+.cyberpunk img {
   padding: 30px ;
   padding-left: 5px;
   padding-right: 5px;
@@ -280,8 +309,8 @@ img.cyberpunk {
 
 /* Paragraphs and lists */
 
-p.cyberpunk {
-  padding: 30px 15px 30px;
+p.cyberpunk,
+.cyberpunk p {
   border: 30px solid #000;
   border-right: 5px solid #000;
   border-left: 5px solid #000;
@@ -293,7 +322,8 @@ p.cyberpunk {
   position: relative;
 }
 
-p.cyberpunk.inverse {
+p.cyberpunk.inverse,
+.cyberpunk p.inverse {
   border: none;
   padding: 40px 15px 30px;
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
@@ -302,7 +332,8 @@ p.cyberpunk.inverse {
   border-right: 3px solid var(--border-color);
 }
 
-p.cyberpunk:before {
+p.cyberpunk:before,
+.cyberpunk p:before {
   content: "P-14";
   display: block;
   position: absolute;
@@ -316,18 +347,23 @@ p.cyberpunk:before {
   border-left: 2px solid var(--border-color);
 }
 
-p.cyberpunk.inverse:before {
+p.cyberpunk.inverse:before,
+.cyberpunk p.inverse:before {
   content: "T-71";
   right:90px;
   bottom: 9px;
 }
+
 section.cyberpunk.black p.cyberpunk.inverse:before,
-section.cyberpunk.black p.cyberpunk:before {
+section.cyberpunk.black p.cyberpunk:before,
+section.cyberpunk.black p.inverse:before,
+section.cyberpunk.black p:before {
  background-color: #000;
  color: var(--yellow-color);
 }
 
-p.cyberpunk:hover:before {
+p.cyberpunk:hover:before,
+.cyberpunk p:hover:before {
   animation-name: buttonhoverafter;
   animation-duration: var(--glitched-duration);
   animation-iteration-count: infinite;
@@ -335,11 +371,14 @@ p.cyberpunk:hover:before {
 }
 
 p.cyberpunk.scannedh,
-p.cyberpunk.scannedv {
+p.cyberpunk.scannedv,
+.cyberpunk p.scannedh,
+.cyberpunk p.scannedv {
   position: relative;
 }
 
-p.cyberpunk.scannedh:after {
+p.cyberpunk.scannedh:after,
+.cyberpunk p.scannedh:after {
   content: "";
   position: absolute;
   top: -30px;
@@ -368,7 +407,8 @@ p.cyberpunk.scannedh:after {
   }
 }
 
-p.cyberpunk.scannedv:after {
+p.cyberpunk.scannedv:after,
+.cyberpunk p.scannedv:after {
   content: "";
   position: absolute;
   top: -30px;
@@ -412,13 +452,15 @@ p.cyberpunk.scannedv:after {
   }
 }
 
-ul.cyberpunk li {
+ul.cyberpunk > li,
+.cyberpunk ul > li {
   list-style: none;
   position: relative;
   font-size: 1.2rem;
 }
 
-ul.cyberpunk li:before {
+ul.cyberpunk > li:before,
+.cyberpunk ul > li:before  {
   content: " ";
   top: 0px;
   left: calc(-1.2rem - 10px);
@@ -430,18 +472,21 @@ ul.cyberpunk li:before {
   clip-path: polygon(0% 10%, 100% 70%, 40% 100%, 50% 70%);
 }
 
-ol.cyberpunk {
+ol.cyberpunk,
+.cyberpunk ol {
   list-style-type:hiragana-iroha; counter-reset: li
 }
 
-ol.cyberpunk li {
+ol.cyberpunk > li,
+.cyberpunk ol > li {
   list-style: none;
   position: relative;
   font-size: 1.2rem;
   counter-increment: li;
 }
 
-ol.cyberpunk li:before {
+ol.cyberpunk li:before,
+.cyberpunk ol > li:before {
   content: counter(li);
   top: 0px;
   left: calc(-1.2rem - 10px);
@@ -456,7 +501,9 @@ ol.cyberpunk li:before {
 }
 
 ol.cyberpunk li.glitched,
-ul.cyberpunk li.glitched {
+ul.cyberpunk li.glitched,
+.cyberpunk ol > li.glitched,
+.cyberpunk ul > li.glitched {
   animation-name: liglitched;
   animation-duration: var(--glitched-duration);
   animation-iteration-count: infinite;
@@ -464,24 +511,32 @@ ul.cyberpunk li.glitched {
 }
 
 ol.cyberpunk li.glitched:nth-child(3n+3),
-ul.cyberpunk li.glitched:nth-child(1) {
+ul.cyberpunk li.glitched:nth-child(1),
+.cyberpunk ol > li.glitched:nth-child(3n+3),
+.cyberpunk ul > li.glitched:nth-child(1) {
   animation-duration: calc(var(--glitched-duration) * 0.5);
 }
 
 ol.cyberpunk li.glitched:nth-child(5n+5),
-ul.cyberpunk li.glitched:nth-child(5n+5) {
+ul.cyberpunk li.glitched:nth-child(5n+5),
+.cyberpunk ol > li.glitched:nth-child(5n+5),
+.cyberpunk ul > li.glitched:nth-child(5n+5) {
   animation-duration: calc(var(--glitched-duration) * 0.7);
   animation-timing-function: ease-out; 
 }
 
 ol.cyberpunk li.glitched:nth-child(2n+2),
-ul.cyberpunk li.glitched:nth-child(2n+2) {
+ul.cyberpunk li.glitched:nth-child(2n+2),
+.cyberpunk ol > li.glitched:nth-child(2n+2),
+.cyberpunk ul > li.glitched:nth-child(2n+2) {
   animation-duration: calc(var(--glitched-duration) * 1.5);
   animation-timing-function: ease-in-out;
 }
 
 ol.cyberpunk li.glitched:nth-child(4n+4),
-ul.cyberpunk li.glitched:nth-child(4n+4) {
+ul.cyberpunk li.glitched:nth-child(4n+4),
+.cyberpunk ol > li.glitched:nth-child(4n+4),
+.cyberpunk ul > li.glitched:nth-child(4n+4) {
   animation-duration: calc(var(--glitched-duration) * 1.2);
   animation-timing-function: ease-in;
 }
@@ -560,7 +615,11 @@ ul.cyberpunk li.glitched:nth-child(4n+4) {
 h1.cyberpunk,
 h2.cyberpunk,
 h3.cyberpunk,
-h4.cyberpunk {
+h4.cyberpunk,
+.cyberpunk h1,
+.cyberpunk h2,
+.cyberpunk h3,
+.cyberpunk h4 {
   font-size: 2rem;
   line-height: 2.2rem;
   font-weight: 200;
@@ -568,19 +627,22 @@ h4.cyberpunk {
   padding-bottom: 15px;
 }
 
-h2.cyberpunk {
+h2.cyberpunk,
+.cyberpunk h2 {
   font-size: 1.7rem;
   line-height: 1.9rem;
   font-weight: 300;
 }
 
-h3.cyberpunk {
+h3.cyberpunk,
+.cyberpunk h3 {
   font-size: 1.4rem;
   line-height: 1.6rem;
   font-weight: 500;
 }
 
-h4.cyberpunk {
+h4.cyberpunk,
+.cyberpunk h4 {
   font-size: 1rem;
   line-height: 1.2rem;
   font-weight: 700;
@@ -589,7 +651,11 @@ h4.cyberpunk {
 h1.cyberpunk:before,
 h2.cyberpunk:before,
 h3.cyberpunk:before,
-h4.cyberpunk:before {
+h4.cyberpunk:before,
+.cyberpunk h1:before,
+.cyberpunk h2:before,
+.cyberpunk h3:before,
+.cyberpunk h4:before {
   content: "";
   display: block;
   position: absolute;
@@ -601,14 +667,16 @@ h4.cyberpunk:before {
   clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
 }
 
-h1.cyberpunk.glitched {
+h1.cyberpunk.glitched,
+.cyberpunk h1.glitched {
   animation-name: h1glitched;
   animation-duration: calc(var(--glitched-duration) * 1.4);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-h2.cyberpunk.glitched {
+h2.cyberpunk.glitched,
+.cyberpunk h2.glitched {
   animation-name: h1glitched;
   animation-duration: calc(var(--glitched-duration) * 1.7);
   animation-iteration-count: infinite;
@@ -616,7 +684,8 @@ h2.cyberpunk.glitched {
   animation-timing-function: linear;
 }
 
-h3.cyberpunk.glitched {
+h3.cyberpunk.glitched,
+.cyberpunk h3.glitched {
   animation-name: h1glitched;
   animation-duration: calc(var(--glitched-duration) * 1.1);
   animation-iteration-count: infinite;
@@ -624,7 +693,8 @@ h3.cyberpunk.glitched {
   animation-timing-function: ease-out;
 }
 
-h4.cyberpunk.glitched {
+h4.cyberpunk.glitched,
+.cyberpunk h4.glitched {
   animation-name: h1glitched;
   animation-duration: calc(var(--glitched-duration) * 2.1);
   animation-iteration-count: infinite;
@@ -661,7 +731,8 @@ h4.cyberpunk.glitched {
   }
 }
 
-h1.cyberpunk.glitched:before {
+h1.cyberpunk.glitched:before,
+.cyberpunk h1.glitched:before {
   animation-name: h1beforeglitched;
   animation-duration: calc(var(--glitched-duration) * 2);
   animation-iteration-count: infinite;
@@ -706,11 +777,13 @@ h1.cyberpunk.glitched:before {
   }
 }
 
-h2.cyberpunk:before {
+h2.cyberpunk:before,
+.cyberpunk h2:before {
   clip-path: polygon(0px 5px, 35px 5px, 40px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 20px 10px, 15px 6px, 0px 6px);
 }
 
-h2.cyberpunk.glitched:before {
+h2.cyberpunk.glitched:before,
+.cyberpunk h2.glitched:before {
   animation-name: h2beforeglitched;
   animation-duration: calc(var(--glitched-duration) * 2);
   animation-iteration-count: infinite;
@@ -744,11 +817,13 @@ h2.cyberpunk.glitched:before {
   }
 }
 
-h3.cyberpunk:before {
+h3.cyberpunk:before,
+.cyberpunk h3:before {
   clip-path: polygon(0px 5px, 10px 5px, 15px 0px, 40px 0px, 45px 5px, 100% 5px, 100% 6px, 31px 6px, 27px 2px, 15px 2px, 8px 10px, 0px 10px);
 }
 
-h4.cyberpunk:before {
+h4.cyberpunk:before,
+.cyberpunk h4:before {
   clip-path: polygon(0px 3px, 15px 3px, 20px 0px, 80px 0px, 85px 3px, 100% 3px, 100% 4px, 85px 4px, 80px 7px, 20px 7px, 15px 4px, 0px 4px);
 }
 
@@ -756,7 +831,12 @@ h1.cyberpunk:after,
 h2.cyberpunk:after,
 h3.cyberpunk:after,
 h4.cyberpunk:after,
-p.cyberpunk:after {
+p.cyberpunk:after,
+.cyberpunk h1:after,
+.cyberpunk h2:after,
+.cyberpunk h3:after,
+.cyberpunk h4:after,
+.cyberpunk p:after {
   content: "_";
   animation-name: hxafter;
   animation-duration: var(--glitched-duration);
@@ -765,15 +845,19 @@ p.cyberpunk:after {
 }
 
 h3.cyberpunk:after,
-h4.cyberpunk:after {
+h4.cyberpunk:after,
+.cyberpunk h3:after,
+.cyberpunk h4:after {
   animation-direction: reverse;
   animation-duration: calc(var(--glitched-duration) / 2);
 }
 
 /* Buttons and links */
 
-button.cyberpunk2077,
-a.cyberpunk2077 {
+button.cyberpunk,
+input[type=submit].cyberpunk, 
+a.cyberpunk {
+  --text: "R-25";
   --background-color: var(--red-color);
   display: block;
   border: none;
@@ -801,34 +885,40 @@ a.cyberpunk2077 {
   display: inline-block;
 }
 
-button.cyberpunk2077:hover,
-a.cyberpunk2077:hover,
-button.cyberpunk2077:focus,
-a.cyberpunk2077:focus {
+button.cyberpunk:hover,
+a.cyberpunk:hover,
+input[type=submit].cyberpunk:hover,
+button.cyberpunk:focus,
+a.cyberpunk:focus,
+input[type=submit].cyberpunk:focus{
   animation-name: buttonhover;
   animation-duration: var(--glitched-duration);
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
 }
 
-button.cyberpunk2077.green,
-a.cyberpunk2077.green {
+button.cyberpunk.green,
+input[type=submit].cyberpunk.green,
+a.cyberpunk.green {
   --background-color: var(--green-color);
 }
 
-button.cyberpunk2077.purple,
-a.cyberpunk2077.purple {
+button.cyberpunk.purple,
+input[type=submit].cyberpunk.purple,
+a.cyberpunk.purple {
   --background-color: var(--purple-color);
 }
 
-button.cyberpunk2077.blue,
-a.cyberpunk2077.blue {
+button.cyberpunk.blue,
+input[type=submit].cyberpunk.blue,
+a.cyberpunk.blue {
   --background-color: var(--blue-color);
 }
 
-button.cyberpunk2077:after,
-a.cyberpunk2077:after {
-  content: "R-25";
+button.cyberpunk:after,
+input[type=submit].cyberpunk:after,
+a.cyberpunk:after {
+  content: var(--text);
   display: block;
   position: absolute;
   bottom: 0px;
@@ -841,18 +931,21 @@ a.cyberpunk2077:after {
   border-left: 2px solid var(--border-color);
 }
 
-button.cyberpunk2077:hover:after,
-a.cyberpunk2077:hover:after,
-button.cyberpunk2077:focus:after,
-a.cyberpunk2077:focus:after {
+button.cyberpunk:hover:after,
+a.cyberpunk:hover:after,
+input[type=submit].cyberpunk:after,
+button.cyberpunk:focus:after,
+a.cyberpunk:focus:after,
+input[type=submit].cyberpunk:after {
   animation-name: buttonhoverafter;
   animation-duration: var(--glitched-duration);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-button.cyberpunk2077:before,
-a.cyberpunk2077:before {
+button.cyberpunk:before,
+a.cyberpunk:before,
+input[type=submit].cyberpunk:before {
   --outside: 4px;
   content: "";
   position: absolute;
@@ -866,10 +959,12 @@ a.cyberpunk2077:before {
   border-right: 2px solid var(--border-color);
 }
 
-button.cyberpunk2077:hover:before,
-a.cyberpunk2077:hover:before,
-button.cyberpunk2077:focus:before,
-a.cyberpunk2077:focus:before {
+button.cyberpunk:hover:before,
+a.cyberpunk:hover:before,
+input[type=submit].cyberpunk:hover:before,
+button.cyberpunk:focus:before,
+a.cyberpunk:focus:before,
+input[type=submit].cyberpunk:focus:before  {
   display: block;
   animation-name: buttonhoverbefore;
   animation-duration: var(--glitched-duration);
@@ -1009,7 +1104,7 @@ section.cyberpunk {
   margin-bottom: -1px;
 }
 section.cyberpunk:after,
-section.cyberpunk.clack:after {
+section.cyberpunk.black:after {
   content: " ";
   display: block;
   bottom: 0px;
@@ -1085,7 +1180,8 @@ section.cyberpunk.black hr {
   background-color: var(--yellow-color);
 }
 
-section.cyberpunk.black img.cyberpunk {
+section.cyberpunk.black img.cyberpunk,
+section.cyberpunk.black img {
   background-color: var(--yellow-color);
 }
 
@@ -1097,7 +1193,16 @@ section.cyberpunk.black input[type="file"].cyberpunk,
 section.cyberpunk.black input[type="number"].cyberpunk,
 section.cyberpunk.black input[type="phone"].cyberpunk,
 section.cyberpunk.black input[type="password"].cyberpunk,
-section.cyberpunk.black select.cyberpunk {
+section.cyberpunk.black select.cyberpunk,
+section.cyberpunk.black textarea.cyberpunk,
+section.cyberpunk.black input[type="text"],
+section.cyberpunk.black input[type="date"],
+section.cyberpunk.black input[type="time"],
+section.cyberpunk.black input[type="file"],
+section.cyberpunk.black input[type="number"],
+section.cyberpunk.black input[type="phone"],
+section.cyberpunk.black input[type="password"],
+section.cyberpunk.black select {
   border-color: var(--yellow-color);
   background-color: #000;
   color: var(--yellow-color); 
@@ -1108,28 +1213,34 @@ section.cyberpunk.black input[type="date"]::-webkit-calendar-picker-indicator{
   filter: invert(82%) sepia(91%) saturate(803%) hue-rotate(352deg) brightness(107%) contrast(104%);
 }
 
-section.cyberpunk.black input[type="radio"].cyberpunk {
+section.cyberpunk.black input[type="radio"].cyberpunk,
+section.cyberpunk.black input[type="radio"] {
   background-color: var(--yellow-color); 
 }
 
-section.cyberpunk.black input[type="radio"].cyberpunk:after {
+section.cyberpunk.black input[type="radio"].cyberpunk:after,
+section.cyberpunk.black input[type="radio"]:after {
   background-color:  #000;
 }
 
-section.cyberpunk.black input[type="radio"].cyberpunk:checked:after {
+section.cyberpunk.black input[type="radio"].cyberpunk:checked:after,
+section.cyberpunk.black input[type="radio"]:checked:after  {
   background-color: var(--red-color);
 }
 
-section.cyberpunk.black input[type="checkbox"].cyberpunk:checked:before {
+section.cyberpunk.black input[type="checkbox"].cyberpunk:checked:before,
+section.cyberpunk.black input[type="checkbox"]:checked:before {
   border-color: var(--red-color);
   border-top-color: transparent;
 }
 
-section.cyberpunk.black input[type="checkbox"].cyberpunk:checked:after {
+section.cyberpunk.black input[type="checkbox"].cyberpunk:checked:after,
+section.cyberpunk.black input[type="checkbox"]:checked:after {
   background-color: var(--red-color);
 }
 
-section.cyberpunk.black p.cyberpunk {
+section.cyberpunk.black p.cyberpunk,
+section.cyberpunk.black p {
   border: 30px solid var(--yellow-color);
   border-right: 5px solid var(--yellow-color);
   border-left: 5px solid var(--yellow-color);
@@ -1137,18 +1248,21 @@ section.cyberpunk.black p.cyberpunk {
   background-color: #000;
 }
 
-section.cyberpunk.black p.cyberpunk.inverse {
+section.cyberpunk.black p.cyberpunk.inverse,
+section.cyberpunk.black p.inverse {
   border: none;
   background-color: var(--yellow-color);
   color: #000;
   border-right: 2px solid var(--border-color);
 }
 
-section.cyberpunk.black ul.cyberpunk li:before {
+section.cyberpunk.black ul.cyberpunk > li:before,
+section.cyberpunk.black ul > li:before {
   background-color: var(--yellow-color);
 }
 
-section.cyberpunk.black ol.cyberpunk li:before {
+section.cyberpunk.black ol.cyberpunk li:before,
+section.cyberpunk.black ol > li:before {
   color: #000;
   background-color: var(--yellow-color);
 }
