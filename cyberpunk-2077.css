@@ -1517,13 +1517,28 @@ aside.cyberpunk a:after {
 /* Steps */
 
 .cyberpunk ul.steps {
+  --size: 25px;
   margin: 0px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   counter-reset: my-counter;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: flex-start;
-  --size: 25px;
+  align-content: center;
+}
+
+@media (max-width: 599px) {
+  .cyberpunk ul.steps li br {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .cyberpunk ul.steps {
+    flex-direction: row;
+  }
 }
 
 .cyberpunk ul.steps li {
@@ -1535,8 +1550,16 @@ aside.cyberpunk a:after {
   font-size: 12px;
   line-height: 12px;
   min-width: 80px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   counter-increment: my-counter;
+  padding-left: 50px;
+}
+
+@media (min-width: 600px) {
+  .cyberpunk ul.steps li {
+    padding-left: 0px;
+    margin-bottom: 60px;
+  }
 }
 
 .cyberpunk.black ul.steps li {
@@ -1545,7 +1568,13 @@ aside.cyberpunk a:after {
 
 .cyberpunk ul.steps li:last-child {
   min-width: 0px;
-  padding: 0px 0px 5px 0px;
+  padding: 0px 0px 5px 50px;
+}
+
+@media (min-width: 600px) {
+  .cyberpunk ul.steps li:last-child {
+    padding: 0px 0px 5px 0px;
+  }
 }
 
 .cyberpunk ul.steps li:before {
@@ -1557,12 +1586,18 @@ aside.cyberpunk a:after {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  bottom: -40px;
+  bottom: -8px;
   left: 0px;
   font-size: 20px;
   font-weight: 700;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 600px) {
+  .cyberpunk ul.steps li:before {
+    bottom: -40px;
+  }
 }
 
 .cyberpunk ul.steps li.current:before {
@@ -1578,15 +1613,19 @@ aside.cyberpunk a:after {
   position: absolute;
   content: "";
   background-color: var(--purple-color);
-  display: block;
-  width: calc(100% - 40px);
-  height: 2px;
-  bottom: -20px;
-  left: 40px;
-  font-size: 20px;
-  font-weight: 700;
-  justify-content: center;
-  align-items: center;
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .cyberpunk ul.steps li:after {
+    display: block;
+    width: calc(100% - 40px);
+    height: 2px;
+    bottom: -20px;
+    left: 40px;
+    font-size: 20px;
+    font-weight: 700;
+  }
 }
 
 .cyberpunk ul.steps li:last-of-type:after {
