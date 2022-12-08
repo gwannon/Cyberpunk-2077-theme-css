@@ -1450,7 +1450,7 @@ aside.cyberpunk a:after {
 }
 
 .cyberpunk .boxtree > .children2:after {
-  clip-path: polygon(50% 0%, 25% 100%, 28% 100%, 50% 10%, 72% 100%, 75% 100%);
+  clip-path: polygon(calc(25% - 2px) 0%, calc(25% - 2px) 100%, calc(25% + 2px) 100%, calc(25% + 2px) 0%, calc(75% - 2px) 0%, calc(75% - 2px) 100%, calc(75% + 2px) 100%, calc(75% + 2px) 0%);
 }
 
 .cyberpunk .boxtree > .width1 {
