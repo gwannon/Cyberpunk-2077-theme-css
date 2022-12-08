@@ -6,10 +6,11 @@
   --orange-color: #ff9800;
   --border-color: #8ae66e;
   --red-color: #ff003c;
-  --blue-color: #136377;
-  --green-color: #446d44;
+  --blue-color: #0c5f74;
+  --green-color: #298d29;
   --purple-color: purple;
   --neon-color: #39ff14;
+  --black-color: #000;
 }
 
 @font-face {
@@ -51,10 +52,10 @@ select.cyberpunk,
 .cyberpunk textarea,
 .cyberpunk select {
   width: calc(100% - 30px);
-  border: 30px solid #000;
-  border-left: 5px solid #000;
-  border-right: 5px solid #000;
-  border-bottom: 15px solid #000;
+  border: 30px solid var(--black-color);
+  border-left: 5px solid var(--black-color);
+  border-right: 5px solid var(--black-color);
+  border-bottom: 15px solid var(--black-color);
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
   margin-bottom: 10px;
   padding: 12px;
@@ -92,7 +93,7 @@ select.cyberpunk,
 select.cyberpunk option,
 .cyberpunk select option {
   color: var(--yellow-color);
-  background-color: #000;
+  background-color: var(--black-color);
 }
 
 input[type="radio"].cyberpunk,
@@ -103,7 +104,7 @@ input[type="radio"].cyberpunk,
   width: 20px;
   appearance: none;
   outline: none;
-  background-color: #000;
+  background-color: var(--black-color);
   cursor: pointer;
   position: relative;
   margin: 0px;
@@ -137,7 +138,7 @@ input[type="checkbox"].cyberpunk,
   width: 20px;
   appearance: none;
   outline: none;
-  background-color: #000;
+  background-color: var(--black-color);
   cursor: pointer;
   position: relative;
   margin: 0px;
@@ -222,7 +223,7 @@ fieldset.cyberpunk {
 
 hr.cyberpunk {
   height: 14px;
-  background-color: #000;
+  background-color: var(--black-color);
   width: 100%;
   border: none;
   clip-path: polygon(0px 7px, 100% 7px, 100% 8px, 0px 8px);
@@ -303,7 +304,7 @@ img.cyberpunk,
   padding-right: 5px;
   padding-bottom: 15px;
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
-  background-color: #000;
+  background-color: var(--black-color);
   max-width: calc(100% - 10px);
 }
 
@@ -311,10 +312,10 @@ img.cyberpunk,
 
 p.cyberpunk,
 .cyberpunk p {
-  border: 30px solid #000;
-  border-right: 5px solid #000;
-  border-left: 5px solid #000;
-  border-bottom: 24px solid #000;
+  border: 30px solid var(--black-color);
+  border-right: 5px solid var(--black-color);
+  border-left: 5px solid var(--black-color);
+  border-bottom: 24px solid var(--black-color);
   padding: 5px;
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
   background-color: var(--yellow-color);
@@ -327,7 +328,7 @@ p.cyberpunk.inverse,
   border: none;
   padding: 40px 15px 30px;
   clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
-  background-color: #000;
+  background-color: #var(--black-color);
   color: var(--yellow-color);
   border-right: 3px solid var(--border-color);
 }
@@ -342,7 +343,7 @@ p.cyberpunk:before,
   padding: 2px 2px 0px 2px;
   font-size: 0.6rem;
   line-height: 0.6rem;
-  color: #000;
+  color: var(--black-color);
   background-color: var(--yellow-color);
   border-left: 2px solid var(--border-color);
 }
@@ -358,7 +359,7 @@ section.cyberpunk.black p.cyberpunk.inverse:before,
 section.cyberpunk.black p.cyberpunk:before,
 section.cyberpunk.black p.inverse:before,
 section.cyberpunk.black p:before {
- background-color: #000;
+ background-color: var(--black-color);
  color: var(--yellow-color);
 }
 
@@ -459,14 +460,14 @@ ul.cyberpunk > li,
   font-size: 1.2rem;
 }
 
-ul.cyberpunk > li:before,
-.cyberpunk ul > li:before  {
+ul.cyberpunk > li:before:not(ul.steps li:before),
+.cyberpunk ul > li:before:not(ul.steps li:before)  {
   content: " ";
   top: 0px;
   left: calc(-1.2rem - 10px);
   width: 1.2rem;
   height: 1.2rem;
-  background-color: #000;
+  background-color: var(--black-color);
   position: absolute;
   display: block;
   clip-path: polygon(0% 10%, 100% 70%, 40% 100%, 50% 70%);
@@ -493,7 +494,7 @@ ol.cyberpunk li:before,
   width: 1.2rem;
   height: 1.2rem;
   color:var(--yellow-color);
-  background-color: #000;
+  background-color: var(--black-color);
   font-weight: 700;
   position: absolute;
   display: block;
@@ -663,7 +664,7 @@ h4.cyberpunk:before,
   left: 2px;
   width: 100%;
   height: 10px;
-  background-color: #000;
+  background-color: var(--black-color);
   clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
 }
 
@@ -926,7 +927,7 @@ a.cyberpunk:after {
   padding: 2px 2px 0px 2px;
   font-size: 0.6rem;
   line-height: 0.6rem;
-  color: #000;
+  color: var(--black-color);
   background-color: var(--yellow-color);
   border-left: 2px solid var(--border-color);
 }
@@ -1097,7 +1098,7 @@ input[type=submit].cyberpunk:focus:before  {
 /* Section */
 section.cyberpunk {
   background-color: var(--yellow-color);
-  color: #000;
+  color: var(--black-color);
   padding: 60px 60px;
   position: relative;
   margin-top: -1px;
@@ -1111,7 +1112,7 @@ section.cyberpunk.black:after {
   left: 0px;
   width: 100%;
   height: 30px;
-  background-color: #000;
+  background-color: var(--black-color);
   position: absolute;
   clip-path: polygon(0% 0%, 22% 0%, calc(22% + 30px) 30px, 52% 30px, calc(52% + 15px) 15px, 70% 15px, calc(70% + 15px) 30px, 90% 30px, calc(90% + 30px) 0px, 100% 0px, 100% 30px, 0px 30px);
 }
@@ -1121,14 +1122,14 @@ section.cyberpunk.black:after {
 }
 
 section.cyberpunk.black {
-  background-color: #000;
+  background-color: var(--black-color);
   color: var(--yellow-color);
 }
 
 .dotted,
 .dotted:before,
 .dotted:after {
-  background: #000;
+  background: var(--black-color);
   background-image: radial-gradient(var(--yellow-color-opacity) 1px, transparent 0);
   background-size: 5px 5px;
   background-position: -13px -3px;
@@ -1157,7 +1158,7 @@ section.cyberpunk.black:before {
 }
 
 section.cyberpunk:before {
-  background-color: #000;
+  background-color: var(--black-color);
 }
 
 section.cyberpunk:nth-child(even):after,
@@ -1204,7 +1205,7 @@ section.cyberpunk.black input[type="phone"],
 section.cyberpunk.black input[type="password"],
 section.cyberpunk.black select {
   border-color: var(--yellow-color);
-  background-color: #000;
+  background-color: var(--black-color);
   color: var(--yellow-color); 
 }
 
@@ -1220,7 +1221,7 @@ section.cyberpunk.black input[type="radio"] {
 
 section.cyberpunk.black input[type="radio"].cyberpunk:after,
 section.cyberpunk.black input[type="radio"]:after {
-  background-color:  #000;
+  background-color:  var(--black-color);
 }
 
 section.cyberpunk.black input[type="radio"].cyberpunk:checked:after,
@@ -1245,25 +1246,25 @@ section.cyberpunk.black p {
   border-right: 5px solid var(--yellow-color);
   border-left: 5px solid var(--yellow-color);
   border-bottom: 24px solid var(--yellow-color);
-  background-color: #000;
+  background-color: var(--black-color);
 }
 
 section.cyberpunk.black p.cyberpunk.inverse,
 section.cyberpunk.black p.inverse {
   border: none;
   background-color: var(--yellow-color);
-  color: #000;
+  color: var(--black-color);
   border-right: 2px solid var(--border-color);
 }
 
 section.cyberpunk.black ul.cyberpunk > li:before,
-section.cyberpunk.black ul > li:before {
+section.cyberpunk.black ul > li:before:not(ul.steps li:before) {
   background-color: var(--yellow-color);
 }
 
 section.cyberpunk.black ol.cyberpunk li:before,
 section.cyberpunk.black ol > li:before {
-  color: #000;
+  color: var(--black-color);
   background-color: var(--yellow-color);
 }
 
@@ -1290,9 +1291,9 @@ aside.cyberpunk ul {
 aside.cyberpunk ul li {
   display: block;
   background-color: var(--yellow-color);
-  border: 1px solid #000;
-  border-left: 10px solid #000;
-  border-bottom: 10px solid #000;
+  border: 1px solid var(--black-color);
+  border-left: 10px solid var(--black-color);
+  border-bottom: 10px solid var(--black-color);
   border-right: none;
   font-size: 1.3rem;
   margin: 3px 0px;
@@ -1303,13 +1304,13 @@ aside.cyberpunk ul li {
 }
 
 aside.cyberpunk ul li:hover {
-  background-color: #000;
+  background-color: var(--black-color);
 }
 
 aside.cyberpunk ul li a {
   display: block;
   padding: 5px 10px;
-  color: #000;
+  color: var(--black-color);
   transform: skew(15deg);
   transition: color 0.3s;
 }
@@ -1320,4 +1321,282 @@ aside.cyberpunk ul li:hover a {
 
 aside.cyberpunk a:after {
   display: none;
+}
+
+
+
+/* BoxTree */
+.cyberpunk .boxtree {
+  --gap: 15px;
+  --border-height: 1px;
+  --padding: 5px;
+  --resolved-text: "RESOLVED";
+  --pending-text: "NO ACCESS";
+}
+
+
+@media (min-width: 600px) {
+	.cyberpunk .boxtree {
+    --gap: 20px;
+    --border-height: 3px;
+    --padding: 10px;
+	}
+}
+
+@media (min-width: 900px) {
+	.cyberpunk .boxtree {
+    --gap: 30px;
+    --border-height: 5px;
+    --padding: 20px;
+	}
+}
+
+.cyberpunk .boxtree {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--gap);
+  margin: 60px -50px;
+}
+
+.cyberpunk .boxtree > div {
+  width: calc(100% - var(--gap));
+  box-sizing: border-box;
+  border: var(--border-height) dashed var(--blue-color);
+  /*border-bottom: var(--border-height) dashed var(--purple-color); */
+  padding: var(--padding);
+  color: var(--blue-color);
+  position: relative;
+}
+
+.cyberpunk.black .boxtree > div {
+  color: var(--yellow-color);
+  border: var(--border-height) dashed var(--yellow-color);
+}
+
+/*.cyberpunk .boxtree > div.children0 {
+  border-bottom: var(--border-height) dashed var(--yellow-color); 
+}*/
+
+.cyberpunk .boxtree > div:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: var(--gap);
+  background-color: var(--blue-color);
+  left: 0px;
+  bottom: calc( 0px - var(--gap) - var(--border-height));
+  clip-path: polygon(calc(50% - 2px) 0%, calc(50% - 2px) 100%, calc(50% + 2px) 100%, calc(50% + 2px) 0%);
+}
+
+.cyberpunk.black .boxtree > div:after {
+  background-color: var(--yellow-color);
+}
+
+.cyberpunk .boxtree > div {
+  width: calc(50% - var(--gap));
+}
+
+.cyberpunk.black .boxtree > div.resolved {
+  border-color: var(--neon-color);
+}
+
+.cyberpunk .boxtree > div.resolved {
+  border-color: var(--green-color);
+}
+
+.cyberpunk .boxtree > div *:before {
+  background-color: var(--blue-color);
+}
+
+.cyberpunk .boxtree > div.resolved, 
+.cyberpunk .boxtree > div.resolved *,
+.cyberpunk .boxtree > div.resolved *:after {
+  color: var(--green-color);
+}
+
+.cyberpunk .boxtree > div.resolved:after,
+.cyberpunk .boxtree > div.resolved *:before {
+  background-color: var(--green-color);
+}
+
+.cyberpunk.black .boxtree > div.resolved, 
+.cyberpunk.black .boxtree > div.resolved *,
+.cyberpunk.black .boxtree > div.resolved *:after {
+  color: var(--neon-color);
+}
+
+.cyberpunk.black .boxtree > div.resolved:after,
+.cyberpunk.black .boxtree > div.resolved *:before {
+  background-color: var(--neon-color);
+}
+
+.cyberpunk .boxtree > div.pending {
+  border-color: var(--purple-color);
+}
+
+.cyberpunk .boxtree > div.pending,
+.cyberpunk .boxtree > div.pending *,
+.cyberpunk .boxtree > div.pending *:after {
+  color: var(--purple-color);
+}
+
+.cyberpunk .boxtree > div.pending:after,
+.cyberpunk .boxtree > div.pending *:before {
+  background-color: var(--purple-color);
+}
+
+.cyberpunk .boxtree > .children2:after {
+  clip-path: polygon(50% 0%, 25% 100%, 28% 100%, 50% 10%, 72% 100%, 75% 100%);
+}
+
+.cyberpunk .boxtree > .width1 {
+  width: calc(100% - var(--gap));
+}
+
+.cyberpunk .boxtree > .width3 {
+  width: calc(25% - var(--gap));  
+}
+
+.cyberpunk .boxtree > .children0:after {
+  display: none;  
+}
+
+@media (max-width: 599px) {
+  .cyberpunk .boxtree > div.width3 {
+    word-break: break-all;
+  }
+}
+
+@media (min-width: 900px) {
+  .cyberpunk .boxtree {
+    margin: 0px;
+  }
+  .cyberpunk .boxtree > div.resolved:before,
+  .cyberpunk .boxtree > div.pending:before {
+    content: var(--resolved-text);
+    font-family: 'VT323';
+    display: block;
+    opacity: 0.7;
+    font-size: 3em;
+    color: var(--green-color);
+    position: absolute;
+    transform: rotate(-15deg);
+    transform-origin: center center;
+    text-align: center;
+    width: 100%;
+    left: 0px;
+    top: calc(50% - 0.5em);
+    z-index: 10;
+  }
+
+  .cyberpunk.black .boxtree > div.resolved:before {
+    color: var(--neon-color);
+  }
+  
+  .cyberpunk .boxtree > div.pending:before {
+    content: var(--pending-text);
+    color: var(--purple-color);
+  }
+
+  .cyberpunk .boxtree > div.resolved:before,
+  .cyberpunk .boxtree > div.pending:before {
+    font-size: 4.7em;
+    top: calc(50% - 0.5em);
+  }
+
+  .cyberpunk .boxtree > div.width3:before {
+    font-size: 2.5em;
+    top: calc(50% - 0.5em);
+  }
+}
+
+/* Steps */
+
+.cyberpunk ul.steps {
+  margin: 0px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  counter-reset: my-counter;
+  justify-content: flex-start;
+  --size: 25px;
+}
+
+.cyberpunk ul.steps li {
+  display: flex;
+  align-items: end;
+  color: var(--black-color);
+  padding: 0px 20px 5px 0px;
+  position: relative;
+  font-size: 12px;
+  line-height: 12px;
+  min-width: 80px;
+  margin-bottom: 60px;
+  counter-increment: my-counter;
+}
+
+.cyberpunk.black ul.steps li {
+  color: var(--yellow-color)
+}
+
+.cyberpunk ul.steps li:last-child {
+  min-width: 0px;
+  padding: 0px 0px 5px 0px;
+}
+
+.cyberpunk ul.steps li:before {
+  position: absolute;
+  content: counter(my-counter);
+  color: var(--yellow-color);
+  background-color: var(--purple-color);
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  bottom: -40px;
+  left: 0px;
+  font-size: 20px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+}
+
+.cyberpunk ul.steps li.current:before {
+  background-color: var(--black-color);
+}
+
+.cyberpunk.black ul.steps li.current:before {
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+}
+
+.cyberpunk ul.steps li:after {
+  position: absolute;
+  content: "";
+  background-color: var(--purple-color);
+  display: block;
+  width: calc(100% - 40px);
+  height: 2px;
+  bottom: -20px;
+  left: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+}
+
+.cyberpunk ul.steps li:last-of-type:after {
+  display: none;
+}
+
+.cyberpunk ul.steps li.current:after {
+ background-color: var(--black-color);
+}
+
+.cyberpunk.black ul.steps li.current:after {
+  background-color: var(--yellow-color);
 }
