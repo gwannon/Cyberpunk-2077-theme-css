@@ -1192,19 +1192,22 @@ section.cyberpunk.both.black:before {
     calc(22% + 45px) 15px, 
     34% 15px, 
     calc(34% + 15px) -1px, 
-    70% 0px,
-    
-    30px 0px,
+    0% 0%, 0% 10%, 
+    30px calc(10% + 30px), 
+    30px 100%, 
+    0% 100%,
+    0% 0%
+  );
+}
+
+/*30px 0px,
     30px 50%,
     0px calc(50% + 30px),
     0px 80%,
     30px calc(80% + 30px),
     30px 100%,
     0% 100%, 0px 30px, 
-    31px 0%
-  );
-  /*background-color: green;*/
-}
+    31px 0%*/
 
 section.cyberpunk:before {
   background-color: var(--black-color);
